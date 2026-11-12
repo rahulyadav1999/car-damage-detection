@@ -131,16 +131,25 @@ The final ResNet50 experiment achieved the following reported validation results
 ## Project Architecture
 
 ```mermaid
+
 flowchart TD
-    A[Vehicle Image Dataset] --> B[Image Preprocessing]
-    B --> C[Data Augmentation]
-    C --> D[Train / Validation Split]
-    D --> E[Pretrained ResNet50]
-    E --> F[Fine-tune Layer4]
-    F --> G[Custom Classification Layer]
-    G --> H[Six-Class Prediction]
-    H --> I[Streamlit Web Application]
-    I --> J[Predicted Damage Category]
+    A["Input: Car Image"] --> B["Resize to 224 × 224"]
+    B --> C["Convert to Tensor"]
+    C --> D["ImageNet Normalization"]
+    D --> E["ResNet50 Backbone"]
+    E --> F["Fine-tuned Layer 4"]
+    F --> G["Global Average Pooling"]
+    G --> H["Dropout (0.2)"]
+    H --> I["Fully Connected Layer"]
+    I --> J["6-Class Prediction"]
+
+    J --> K["Front Breakage"]
+    J --> L["Front Crushed"]
+    J --> M["Front Normal"]
+    J --> N["Rear Breakage"]
+    J --> O["Rear Crushed"]
+    J --> P["Rear Normal"]
+
 ```
 
 ## Streamlit Application
