@@ -226,16 +226,18 @@ The trained model weights are stored in `saved_model.pth` and tracked using Git 
 - Explore object detection and damage localization.
 
 
+
 ## Application Screenshots
 
 ### Home Page
-![Application Home](screenshots/app_home.png)
+![Application Home](app_home.png)
 
 ### Uploaded Car Image
-![Uploaded Car Image](screenshots/uploaded_image.png)
+![Uploaded Car Image](uploaded_image.png)
 
 ### Prediction Result
-![Prediction Result](screenshots/prediction_result.png)
+![Prediction Result](prediction_result.png)
+
 
 
 ## Author
